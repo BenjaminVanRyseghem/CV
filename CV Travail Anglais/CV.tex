@@ -1,3 +1,4 @@
+% !TEX encoding = UTF-8 Unicode
 %% cv.tex --- Example of CurVe usage.
 
 %% Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005 Didier Verna.
@@ -24,14 +25,53 @@
 \documentclass{curve}
 
 \usepackage[margin=1.5cm, top = 1.5cm, bottom = 1.5cm]{geometry}
-\usepackage[applemac]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[frenchb]{babel}
+\usepackage[british,UKenglish,USenglish,english,american]{babel}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{amssymb}
+\usepackage{etoolbox,refcount}
+\usepackage{multicol}
 
+%\renewcommand\labelitemi{\textemdash}
+
+\newcommand{\Csharp}{%
+  {\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\textbf{\#}}}}}
+
+\newcounter{countitems}
+\newcounter{nextitemizecount}
+\newcommand{\setupcountitems}{%
+  \stepcounter{nextitemizecount}%
+  \setcounter{countitems}{0}%
+  \preto\item{\stepcounter{countitems}}%
+}
+
+\makeatletter
+
+% Removes entry* prefix
+\def\@prefix{}
+
+% Fixes spacing
+\setlength\subrubricspace{25pt}
+
+\newcommand{\computecountitems}{%
+  \edef\@currentlabel{\number\c@countitems}%
+  \label{countitems@\number\numexpr\value{nextitemizecount}-1\relax}%
+}
+\newcommand{\nextitemizecount}{%
+  \getrefnumber{countitems@\number\c@nextitemizecount}%
+}
+\newcommand{\previtemizecount}{%
+  \getrefnumber{countitems@\number\numexpr\value{nextitemizecount}-1\relax}%
+}
+\makeatother    
+\newenvironment{AutoMultiColItemize}{%
+\ifnumcomp{\nextitemizecount}{>}{2}{\begin{multicols}{2}}{}%
+\setupcountitems\begin{itemize}}%
+{\end{itemize}%
+\unskip\computecountitems\ifnumcomp{\previtemizecount}{>}{2}{\end{multicols}}{}}
 
 \title{}
 %\subtitle{and the subtitle}
@@ -40,7 +80,7 @@
 
 \begin{minipage}{7cm}
 \large
-Benjamin \bsc{Van Ryseghem}\\
+Benjamin \textsc{Van Ryseghem}\\
 \normalsize
 \\
 Upplandsgatan, 91A\\
@@ -49,17 +89,17 @@ Upplandsgatan, 91A\\
 +43702866639\\
 \href{mailto:benjamin@vanryseghem.com}{benjamin@vanryseghem.com}\\
 \href{http://benjamin.vanryseghem.com}{\underline{http://benjamin.vanryseghem.com}}\\
-27 ans - Driving licence.
+\href{https://github.com/BenjaminVanRyseghem}{\raisebox{-2px}{\includegraphics[height=12px]{github}} BenjaminVanRyseghem}\\
+%\href{https://www.linkedin.com/in/benjamin-van-ryseghem-8228017b}{\raisebox{-2px}{\includegraphics[height=12px]{linkedin}} benjamin-van-ryseghem}\\
+\\28 years old - Driving license
 \end{minipage}
 \hfill
 \begin{minipage}{7cm}
   \begin{flushright}
-  \includegraphics[height=5cm]{Moi}
+  \includegraphics[height=3cm]{Moi}
   \end{flushright}
 \end{minipage}
-%\vspace{-0.5cm}
 \maketitle
-\vspace{-1cm}
 
 \makerubric{rubric}
 \end{document}
