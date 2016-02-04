@@ -28,17 +28,26 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage{mathpazo}
 \usepackage[british,UKenglish,USenglish,english,american]{babel}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{amssymb}
 \usepackage{etoolbox,refcount}
 \usepackage{multicol}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{xspace}
+\usepackage{hyperref}
 
-%\renewcommand\labelitemi{\textemdash}
+\urlstyle{mathpazo}
+
+\fancyfoot[C]{\thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt} 
+\pagestyle{fancy}
 
 \newcommand{\Csharp}{%
-  {\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\textbf{\#}}}}}
+  {\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\textbf{\#}}}}\xspace}
 
 \newcounter{countitems}
 \newcounter{nextitemizecount}
@@ -49,6 +58,11 @@
 }
 
 \makeatletter
+
+\def\url@foostyle{%
+  \@ifundefined{mathpazo}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+
+\urlstyle{foo}
 
 % Removes entry* prefix
 \def\@prefix{}
@@ -76,19 +90,28 @@
 \title{}
 %\subtitle{and the subtitle}
 \continuedname{~(asdfs)}
+
 \begin{document}
+
+\pagenumbering{arabic}
 
 \begin{minipage}{7cm}
 \large
 Benjamin \textsc{Van Ryseghem}\\
 \normalsize
 \\
+{\raisebox{10px}{\includegraphics[height=12px]{map-marker}} \begin{tabular}{@{}l}
 Upplandsgatan, 91A\\
 5th floor\\
-113 44 Stockholm\\
-+43702866639\\
-\href{mailto:benjamin@vanryseghem.com}{benjamin@vanryseghem.com}\\
-\href{http://benjamin.vanryseghem.com}{\underline{http://benjamin.vanryseghem.com}}\\
+113 44 Stockholm
+\end{tabular}}\\
+
+%+43702866639\\
+{\raisebox{-3px}{\includegraphics[height=12px]{mobile}} +43702866639}\\
+%\href{mailto:benjamin@vanryseghem.com}{benjamin@vanryseghem.com}\\
+\href{mailto:benjamin@vanryseghem.com}{\raisebox{-3px}{\includegraphics[height=12px]{at}} benjamin@vanryseghem.com}\\
+\href{http://benjamin.vanryseghem.com}{\raisebox{-3px}{\includegraphics[height=12px]{home}} \url{http://benjamin.vanryseghem.com}}\\
+%\href{http://benjamin.vanryseghem.com}{http://benjamin.vanryseghem.com}\\
 \href{https://github.com/BenjaminVanRyseghem}{\raisebox{-2px}{\includegraphics[height=12px]{github}} BenjaminVanRyseghem}\\
 %\href{https://www.linkedin.com/in/benjamin-van-ryseghem-8228017b}{\raisebox{-2px}{\includegraphics[height=12px]{linkedin}} benjamin-van-ryseghem}\\
 \\28 years old - Driving license
@@ -100,8 +123,9 @@ Upplandsgatan, 91A\\
   \end{flushright}
 \end{minipage}
 \maketitle
-
+\vspace{-1cm}
 \makerubric{rubric}
 \end{document}
+
 
 %% cv.tex ends here.
