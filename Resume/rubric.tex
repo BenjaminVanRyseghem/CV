@@ -20,7 +20,12 @@
 
 %% CurVe consists of the files listed in the file `README'.
 \continuedname{}
-\begin{rubric}{%Emploie Saisonnier
+
+\newcommand{\link}[2]{\href{#2}{\underline{\smash{#1}}}}
+
+\setlength{\leftmargini}{1em}
+
+\begin{rubric}{
 }
 
 %----------------------------------------------------------
@@ -30,25 +35,27 @@
 
 % 15/07/2014
 \entry*[July 2014 - present]
-\textbf{Software engineer} at \href{http://www.foretagsplatsen.se/}{\underline{\textsc{Företagsplatsen}}}: front-end developer, UI~\&~UX
+\textbf{Software engineer} at \link{\textsc{Företagsplatsen}}{http://www.foretagsplatsen.se/}: full-stack engineer, UX~\&~UI
 
 \begin{itemize}
 \item Front-end development
 
-  JavaScript development, client-side architecture, UX~\&~UI design (Less/CSS,
+  JavaScript development (ES5/ES6), client-side architecture, UX~\&~UI design (Less/CSS,
   SVG~icons).  Unit testing is an important part of the development process, we
-  have been using QUnit for JavaScript testing and NUnit on the server-side.
+  are using Jasmine for JavaScript testing (through Karma).
 
 \item Backend development
 
-Backend in \Csharp (with a couchdb database)
+Backend in \Csharp, using the MVP framework for REST API handling. The server
+fetches the data from a CouchDB database. We use NUnit on the server-side for unit testing.
 
 \item CI~\&~DevOps
 
-Experience with automated testing, deployment on Microsoft Azure using Ansible.
+Experience with automated testing via TeamCity.
+Automatic deployment on Microsoft Azure using Ansible.
 \end{itemize}
 
-% \mbox{}
+% \medskip
 
 % Technologies:
 % \begin{AutoMultiColItemize}
@@ -60,7 +67,7 @@ Experience with automated testing, deployment on Microsoft Azure using Ansible.
 % 	\item[- ] Ansible
 % \end{AutoMultiColItemize}
 
-% \mbox{}
+% \medskip
 
 % Keywords:
 % \begin{AutoMultiColItemize}
@@ -71,16 +78,16 @@ Experience with automated testing, deployment on Microsoft Azure using Ansible.
 % 01/07/2013 - 31/08/2013
 \entry*[July - August 2013]
 
-\textbf{Scientific engineer} at \textsc{Inria} to redesign of the Pharo
+\textbf{Scientific engineer} at \textsc{Inria} (\link{RMoD}{http://rmod.inria.fr/}): redesign of the Pharo
 Smalltalk IDE
 
-\mbox{}
+\begin{itemize}
+    \item Responsible for the refactoring of the legacy "Morphic UI" framework.
+    \item Implementation of \link{Spec}{https://benjamin.vanryseghem.com/projects/spec/}: a UI-generation framework.
+    \item Development of a fully-featured IDE solution for \link{Pharo}{http://pharo.org/}.
+\end{itemize}
 
-My position at the \href{http://rmod.inria.fr/}{\underline{RMoD}} team involved
-refactoring the legacy Morphic UI framework, implementing a UI-generation
-framework in Smalltalk, and writing a full IDE solution for Pharo.
-
-% \mbox{}
+% \medskip
 
 % Technologies:
 % \begin{AutoMultiColItemize}
@@ -90,7 +97,7 @@ framework in Smalltalk, and writing a full IDE solution for Pharo.
 % 	\item[- ] Spec
 % \end{AutoMultiColItemize}
 
-% \mbox{}
+% \medskip
 
 % Keywords:
 % \begin{AutoMultiColItemize}
@@ -99,23 +106,21 @@ framework in Smalltalk, and writing a full IDE solution for Pharo.
 % \end{AutoMultiColItemize}
 
 % 01/06/2013 - 30/06/2014
-\entry*[June 2013 - June 2014] \textbf{Software engineer consultant} for \href{http://www.foretagsplatsen.se/}{\underline{\textsc{Företagsplatsen}}}
+\entry*[June 2013 - June 2014] \textbf{Software engineer consultant} at \link{\textsc{Företagsplatsen}}{http://www.foretagsplatsen.se/}
 
 \begin{itemize}
-\item Involvement in the development of a new major release of their web
-  application: technical migration to a JavaScript-based user interface.
+\item Development of a new major release of the web
+  application: technical migration from a template-based server-side application to a component-based JavaScript single-page application.
 \item Development of a cloud-based document archive application \emph{à la} Dropbox for
   accounting agencies.
 \end{itemize}
 
 % 01/06/2013 - 31/08/2013
-\entry*[June - August 2013] \textbf{Software engineer} Student program in the \textsc{Google Summer of Code}
+\entry*[June - August 2013] \textbf{Software engineer} Student program of the \textsc{Google Summer of Code}
 
-\mbox{}
+\medskip
 
-During the \textsc{Google Summer of Code}, I worked on the \emph{Spec UI
-  framework}, extracting its code base and uncoupling it from the Morphic UI
-legacy framework.
+Improvement of \link{Spec}{https://benjamin.vanryseghem.com/projects/spec/}: decoupling the models from the UI framework for better extensibility.
 
 % \begin{itemize}
 % 	\item[- ] Work autonomy
@@ -130,14 +135,12 @@ legacy framework.
 % \end{itemize}
 
 % 01/03/2013 - 31/03/2013
-\entry*[March 2013] \textbf{Young Engineer} at \textsc{Inria}: Development of UI
-elements, cleaning of legacy code
+\entry*[March 2013] \textbf{Young Engineer} at \textsc{Inria} (\link{RMoD}{http://rmod.inria.fr/}): UI framework development
 
-\mbox{}
-
-As part of the \href{http://rmod.inria.fr/}{\underline{RMoD}} team, I was in
-charge of the implementation of new Morphic widgets, as well as various
-refactorings of decades old Morphic code.
+\begin{itemize}
+    \item Implementation of new UI widgets (in Morphic).
+    \item Refactoring of the legacy UI codebase.
+\end{itemize}
 
 % \begin{itemize}
 % 	\item[- ] Work autonomy
@@ -145,14 +148,11 @@ refactorings of decades old Morphic code.
 % \end{itemize}
 
 % 26/08/2012 - 01/09/2012
-\entry*[August 2012] \textbf{Head of the Student volunteer program}:
-International Smalltalk conference
+\entry*[August 2012] \textbf{Head of the Student volunteer program} at International Smalltalk conference
 
-\mbox{}
+\medskip
 
-As head of the student volunteers, I was in charge of the coordination of the
-students and the well-being of the attendees at the \emph{20th International
-  Smalltalk Conference}.
+In charge of the coordination of the students and the well-being of the attendees at the \emph{20th International Smalltalk Conference}.
 
 % \begin{itemize}
 % 	\item[- ] Team management
@@ -162,24 +162,23 @@ students and the well-being of the attendees at the \emph{20th International
 % 28/08/2012
 \entry*[August 2012] \textbf{First author} of \emph{A Framework for the Specification and Reuse of UIs and their Models}
 
-\mbox{}
+\medskip
 
 Publication of the article \emph{A Framework for the Specification and Reuse of UIs and their Models} by Benjamin \textsc{Van~Ryseghem}, Stéphane \textsc{Ducasse}, and Johan \textsc{Fabry} at IWST~'12.
 
 % 01/05/2012 - 31/08/2012
-\entry*[May - August 2012] \textbf{Software engineer} Student program in the \textsc{Google Summer of Code}
+\entry*[May - August 2012] \textbf{Software engineer} Student program of the \textsc{Google Summer of Code}
 
-\mbox{}
+\medskip
 
-During the Google Summer of Code I had for project to implement the \emph{Traits support in Nautilus},
-the new default Pharo IDE I previously wrote.
+Implementation the \emph{Traits support in Nautilus}, the new default Pharo IDE I previously developed.
 
 % 01/07/2012 - 15/08/2012
-\entry*[July - August 2012] \textbf{Young engineer} at \textsc{Inria} to refactor and improve widgets
+\entry*[July - August 2012] \textbf{Young engineer} at \textsc{Inria} (\link{RMoD}{http://rmod.inria.fr/}): Refactor and improve widgets
 
-\mbox{}
+\medskip
 
-Employed by the \textsc{Inria} within the \href{http://rmod.inria.fr/}{\underline{RMoD}} team in charge of the improvement of widgets and the development of a widgets generation framework.
+In charge of the improvement of widgets and the development of a widgets generation framework.
 
 %\begin{itemize}
 %	\item[- ] User interface
@@ -187,11 +186,11 @@ Employed by the \textsc{Inria} within the \href{http://rmod.inria.fr/}{\underlin
 %\end{itemize}
 
 % Summer 2011
-\entry*[Summer 2011] \textbf{Software engineer} Student program in the \textsc{SummerTalk}
+\entry*[Summer 2011] \textbf{Software engineer} Student program of the \textsc{SummerTalk}
 
-\mbox{}
+\medskip
 
-The SummerTalk is an \textsc{Esug} (European Smalltalk User Group) equivalent to the Google Summer of Code. My project was to improve the Pharo IDE tools.
+Improve the \link{Pharo}{http://pharo.org/} IDE toolset. The SummerTalk is an \textsc{Esug} (European Smalltalk User Group) equivalent to the Google Summer of Code.
 
 %\begin{itemize}
 %	\item[- ] Monthly reports
@@ -200,15 +199,19 @@ The SummerTalk is an \textsc{Esug} (European Smalltalk User Group) equivalent to
 
 \subrubric{FLOSS Projects}
 
-Pharo&&As a core maintainer of Pharo (an open source Smalltalk implementation), most of my Smalltalk projects have been integrated in the distribution. My other Smalltalk projects can be found on Smalltalkhub (\href{http://smalltalkhub.com/#!/~BenjaminVanRyseghem}{\url{http://smalltalkhub.com/\#!/~BenjaminVanRyseghem}}).\\\\\\
+Pharo&&As a core maintainer of Pharo (an open source Smalltalk implementation), most of my Smalltalk projects have been integrated in the distribution. My other Smalltalk projects can be found on \link{Smalltalkhub}{http://smalltalkhub.com/\#\!/~BenjaminVanRyseghem}.\\\\
 &&Following is a selection of FLOSS projects of which I am the author. \\
-&& Please see my GitHub profile (\href{https://github.com/BenjaminVanRyseghem}{BenjaminVanRyseghem}) for a more complete list.\\
+&& Please see my \link{GitHub profile}{https://github.com/BenjaminVanRyseghem} for a more complete list.\\
 
-\mbox{}\\
+\medskip\\
+
+\entry*[git-linter] \textbf{git-linter} is a command line tool and a docker-based GitHub/Gitlab CI integration that lint git commit messages using project-defined rules. The code is distributed under the GPL 3.0 license.
+
+\entry*[SandGlass] \textbf{SandGlass} is an electron-based systray app used to track my working time. It provides a CLI for workflow integration and D3 based histograms of time per projects. The code is distributed under the GPL 3.0 license.
 
 \entry*[great-things-done] \textbf{Great Things Done} is a keyboard-centric GTD application based on Electron, and implemented in \mbox{Clojure/ClojureScript}. The front-end uses Reagent (an adaptor to React in CLJS), and implements some interesting features like a fully encrypted file-based database, global shortcut with OS X integrations, or Dock icon support. The code is distributed under the EPL 1.0 license.
 
-\entry*[teamwall] \textbf{Teamwall} is designed to help the members of a remote team to feel close to each other. It provides a page with a picture of all the team members, the pictures being refreshed every minute. It allows to know in a glance who is there, who is in pause, or to spot when a possible interesting discussion occurs. The code is distributed under the GPL 3.0 license.
+% \entry*[teamwall] \textbf{Teamwall} is designed to help the members of a remote team to feel close to each other. It provides a page with a picture of all the team members, the pictures being refreshed every minute. It allows to know in a glance who is there, who is in pause, or to spot when a possible interesting discussion occurs. The code is distributed under the GPL 3.0 license.
 
 \entry*[ergotron-firmware] \textbf{ergotron} is a hand-made custom keyboard I built from scratch. The firmware is based on the excellent ergodox-firmware by Ben Blazak. The firmrware has been extended to support a lot more keys and LEDs, leading to a new hardware layout. The code is distributed under the MIT license.
 
@@ -219,7 +222,7 @@ Pharo&&As a core maintainer of Pharo (an open source Smalltalk implementation), 
 
 \entry*[Agile] \textbf{Remote working}, Pair-programming, TDD, Getting Things Done, Scrum, Pomodoro
 \entry*[Programming] \textbf{JavaScript}, Clojure, Smalltalk, \textsc{Java}, C, \textsc{SQL}, \textsc{Prolog}, \textsc{Caml}, \textsc{Cobol}
-\entry*[Software] VCS (\textbf{Git}, \textbf{SVN}), \textbf{WebStorm}/\textbf{IntelliJ IDEA}, Slack, Upsource, TunnelBlick
+\entry*[Software] \textbf{Git}, \textbf{WebStorm}, \textbf{GitHub}, Gitlab, Slack, Upsource, TunnelBlick
 \entry*[Continuous Integration] Travis CI, TeamCity, Jenkins
 \entry*[System] \textsc{GNU Linux/UNIX}, OS X, Microsoft Windows, AS400
 %\entry*[Web] J2EE, HTML/CSS, Flash (autodidacte).
@@ -241,7 +244,7 @@ DUT Informatique (a 2 year technical degree in Computer Science)  at the IUT A d
 % \item[] \begin{itemize}
 %        \item[- ] Programming languages
 %	\item[- ] Communication
-%%	\item[- ] Connaissance de l'entreprise (SSII) : gestion d'entreprise, conomie, droit
+%%	\item[- ] Connaissance de l'entreprise (SSII) : gestion d'entreprise, économie, droit
 %       \end{itemize}
 %\end{itemize}
 
@@ -254,7 +257,7 @@ Classe Préparatoire aux Grandes Écoles (Higher School Preparatory Classes), Ma
 %  \item[- ]  Rigour
 %\end{itemize}
 %\entry*[2007 - 2009]
-%3\textup{me} anne de Licence de Mathmatiques Pures et Appliques  l'Universit des Sciences et Technologies de Lille.
+%3\textup{me} année de Licence de Mathématiques Pures et Appliquées à l'Université des Sciences et Technologies de Lille.
 %\begin{itemize}
 %  \item[- ]  Esprit de synthse
 %%  \item[- ]  Autonomie.
@@ -262,61 +265,61 @@ Classe Préparatoire aux Grandes Écoles (Higher School Preparatory Classes), Ma
 
 %\end{itemize}
 %\entry*[2005 - 2007]
-%Classe Prparatoire aux Grandes coles, Mathmatiques-Physique option Informatique aux lyces Roosevelt et Clmenceau de Reims.
+%Classe Préparatoire aux Grandes Écoles, Mathématiques-Physique option Informatique aux lycées Roosevelt et Clémenceau de Reims.
 %\begin{itemize}
 %  \item[- ]  Gestion du stress
-%  \item[- ]  Comptitivit
-%  \item[- ]  Qualit de communication
+%  \item[- ]  Compétitivité
+%  \item[- ]  Qualité de communication
 %\end{itemize}
 
 \entry*[2005]
 Graduation of a High School Diploma "Scientifique option Sciences de l'Ingénieur, spécialité Mathématiques" (Scientific highschool diploma, with an engineering sciences option and a Mathematic speciality) at Lycée Joliot-Curie at Romilly sur Seine.
 
 
-%\entry*[t 2011]
-%Participation au SummerTalk organis par \textsc{Esug} (European Smalltalk User Group) pour le projet \emph{Tools improvement}.
+%\entry*[Été 2011]
+%Participation au SummerTalk organisé par \textsc{Esug} (European Smalltalk User Group) pour le projet \emph{Tools improvement}.
 %\begin{itemize}
-%	\item[- ] criture de compte-rendus mensuels
+%	\item[- ] Écriture de compte-rendus mensuels
 %	\item[- ] Autonomie de travail
 %\end{itemize}
 
 %\entry*[01/05/2011 - 30/06/2011]
-%Employ  l'\textsc{Inria}, en charge de l'amlioration des widgets et du dveloppement de nouveaux outils d'dition de code.
+%Employé à l'\textsc{Inria}, en charge de l'amélioration des widgets et du développement de nouveaux outils d'édition de code.
 %\begin{itemize}
 %	\item[- ] Interface utilisateur
 %	\item[- ] Ergonomie
 %\end{itemize}
 
 %\entry*[01/11/2010 - 21/04/2011\\01/04/2012 - 31/06/2012]
-%Stagiaire  l'\textsc{Inria}, en charge du projet \textbf{Hazelnut} (cration dynamique de noyaux dans un langage rflexif) au sein de l'quipe \textsc{\href{http://rmod.inria.fr/}{\underline{RMoD}}}.
+%Stagiaire à l'\textsc{Inria}, en charge du projet \textbf{Hazelnut} (création dynamique de noyaux dans un langage réflexif) au sein de l'équipe \textsc{\href{http://rmod.inria.fr/}{\underline{RMoD}}}.
 %\begin{itemize}
-%	\item[- ] Programmation oriente objet
-%	\item[- ] Rdaction de rapports techniques
+%	\item[- ] Programmation orientée objet
+%	\item[- ] Rédaction de rapports techniques
 %	\item[- ] Gestion autonome de projets
 %\end{itemize}
 
 
 
 %\entry*[2010]
-%Projet tuteur : Ajout d'un plugin  Pharo, une IDE pour \textsc{SmallTalk}
+%Projet tuteuré : Ajout d'un plugin à Pharo, une IDE pour \textsc{SmallTalk}
 %\begin{itemize}
 %  \item[- ]  Sens de l'initiative.
-%  \item[- ]  Travail d'quipe.
-%  \item[- ]  Respect des dlais.
+%  \item[- ]  Travail d'équipe.
+%  \item[- ]  Respect des délais.
 %  \item[- ]  Gestion d'un projet, de l'analyse au recettage.
 %\end{itemize}
 %\entry*[2009]
-%Employ polyvalent  la SARL \textsc{What's Up} (salle d'escalade)  Villeneuve d'Ascq.
+%Employé polyvalent à la SARL \textsc{What's Up} (salle d'escalade) à Villeneuve d'Ascq.
 %\begin{itemize}
 %  \item[- ]  Polyvalence
-%  \item[- ]  Facult d'adaptation
+%  \item[- ]  Faculté d'adaptation
 %\end{itemize}
 
 %\entry*[2006 - 2008]
-%Libraire durant un mois, puis temps complet partag Service Dcoration/Hte de Caisse durant un mois, puis Service Dcoration durant un mois au centre \textsc{E.Leclerc} Sodirom, Romilly-sur-Seine (emploi saisonnier).
+%Libraire durant un mois, puis temps complet partagé Service Décoration/Hte de Caisse durant un mois, puis Service Décoration durant un mois au centre \textsc{E.Leclerc} Sodirom, Romilly-sur-Seine (emploi saisonnier).
 %\begin{itemize}
-%  \item[- ]  Respect de chartes internes (charte graphique, quantits et dimensions des impressions).
-%  \item[- ]  Crativit.
+%  \item[- ]  Respect de chartes internes (charte graphique, quantités et dimensions des impressions).
+%  \item[- ]  Créativité.
 %\end{itemize}
 %----------------------------------------------------------
 %   CENTRES D'INTERETS
