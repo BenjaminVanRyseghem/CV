@@ -2,3 +2,6 @@ CV.synctex.gz
 CV.aux
 
 *.log
+*.out
+*.aux
+*.synctex.gz
