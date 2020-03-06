@@ -1,0 +1,29 @@
+Hi,
+
+I am a 31 years old software engineer currently looking for a position. I live in Compiegne, France. 
+I spent the last 10 years improving my skills, learning new things and working on awesome projects. 
+I am a former Smalltalker, now having fun with functional languages (especially Clojure/ClojureScript).
+
+My current position is about leading the front effort to unify all our apps, in term of codebase as well as UI.
+
+I have always been a remote developer in an international team. So I have years of experience 
+in asynchronous communication, self organisation, writing down documentation to not block the next guy, etc.
+
+I also consider (big enough) FLOSS projects to be a good experience of remote work.
+
+From my beginnings as a software making enthusiast I have been deeply involved in open source communities. 
+I have been a core maintainer of Pharo, the most used FLOSS Smalltalk implementation. 
+I have contributed to dozen of open source projects, and I am currently the lead maintainer of numbro, a js library for 
+number formatting.
+
+You can read more about myself (including my research papers, my presentations, and some blog articles) on my 
+personal website: https://benjamin.vanryseghem.com.
+
+Thank you for your time, I hope hearing from you soon, 
+Benjamin Van Ryseghem
+
+
+
+GitHub: https://github.com/BenjaminVanRyseghem
+GitLab: https://gitlab.com/BenjaminVanRyseghem
+Website: https://benjamin.vanryseghem.com
